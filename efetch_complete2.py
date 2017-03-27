@@ -54,10 +54,10 @@ if __name__ == '__main__':
             pubtype_list = res['PubmedArticle'][0]['MedlineCitation']['Article']['PublicationTypeList']
             pubtype_str = str(pubtype_list)
             pub_sheet.cell(row=rowNum, column=3).value = pubtype_str
-            ++pub_data
+            #++pub_data
         except:
             pub_sheet.cell(row=rowNum, column=3).value = "No pubtype data"
-            ++no_pub_data
+            #++no_pub_data
 
         # initialize mesh list
         mesh_list = []
@@ -68,10 +68,10 @@ if __name__ == '__main__':
             #    mesh_list.append(attr, value)
             mesh_str = str(myList)
             mesh_sheet.cell(row=rowNum, column=4).value = mesh_str
-            ++mesh_data
+            #++mesh_data
         except:
             mesh_sheet.cell(row=rowNum, column=4).value = "No MeSH available"
-            ++no_mesh_data
+            #++no_mesh_data
 
     wb.save('backlog_DOIs.xlsx')
     print "Process completed"
