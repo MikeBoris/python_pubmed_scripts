@@ -67,7 +67,7 @@ if __name__ == '__main__':
     # load pickled model
     clf = joblib.load('PubClassifier.pkl')
     # set up db connection
-    con = cx_Oracle.connect('query/ebsco@oramfs:1521/mfs.epnet.com')
+    con = cx_Oracle.connect(###########################)
     cur = con.cursor()
     cur.execute(Q.query)
     # print results in MTI-required format
