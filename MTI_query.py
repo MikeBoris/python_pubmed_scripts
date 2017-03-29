@@ -41,7 +41,7 @@ where q.rn=1 and q.abstract is not null
 import datetime
 import cx_Oracle
 # set up db connection
-con = cx_Oracle.connect('query/ebsco@oramfs:1521/mfs.epnet.com')
+con = cx_Oracle.connect(###############################)
 
 cur = con.cursor()
 
