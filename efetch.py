@@ -40,13 +40,13 @@ from Bio import Entrez
 query = argv[1]
 
 def search(doi):
-    Entrez.email = 'dclynch123@gmail.com'
+    Entrez.email = 'abc@example.com' # insert your email
     handle = Entrez.esearch(db='pubmed', retmode='xml', term=doi)
     results = Entrez.read(handle)
     return results
 
 def fetch_details(id_list):
-    Entrez.email = 'dclynch123@gmail.com'
+    Entrez.email = 'abc@example.com' # insert your email
     handle = Entrez.efetch(db='pubmed', retmode='xml', id=id_list)
     results = Entrez.read(handle)
     return results
