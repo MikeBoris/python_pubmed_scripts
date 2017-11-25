@@ -14,14 +14,14 @@ import CIN_Desc_ID_Dict as CDID
 
 # search pubmed for doi, return list of eligible pmids
 def search(doi):
-    Entrez.email = 'dclynch123@gmail.com'
+    Entrez.email = 'abc@example.com' # insert your email
     handle = Entrez.esearch(db='pubmed', retmode='xml', term=doi)
     results = Entrez.read(handle)
     return results
 
 # search pubmed for pmid, return pubmed citation data in messy dict
 def fetch_details(id_list):
-    Entrez.email = 'dclynch123@gmail.com'
+    Entrez.email = 'abc@example.com' # insert your email
     handle = Entrez.efetch(db='pubmed', retmode='xml', id=id_list)
     results = Entrez.read(handle)
     return results
